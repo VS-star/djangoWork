@@ -21,3 +21,10 @@ When you move the project to a new server e.g., a test or production server, you
 To create an application, you use the startapp command as follows:
 `python manage.py startapp app_name`
 For example, you can create an application called blog using the startapp command like this: `python manage.py startapp blog`
+
+<!-- Registering an app to project -->
+
+After creating an application, you need to register it to the project especially when the application uses templates and interacts with a database.
+To register the blog app, you add the `blog.apps.BlogConfig` class to the `INSTALLED_APPS` list in the `settings.py` of the project:
+`INSTALLED_APPS = [ 'blog' ]`
+
